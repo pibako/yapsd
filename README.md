@@ -1,9 +1,9 @@
 # Installation script for Debian Squeeze Box
-## WHY?
-- there is plenty of passenger-stack out there but none of them work
+### WHY?
+- there is plenty of passenger-stack's out there but none of them work
 
-# Procedure
-## pre :install
+## Procedure
+### pre :install
 - log in to your VPS slice using root account
 - execute ```passwd``` to change root password
 - add sudo and create new user
@@ -18,7 +18,7 @@
 
 - now you are ready to go with installation
 
-## :install
+### :install
 - execute in some directory ```$DIR```:
 ```git clone git://github.com/pibako/yaps.git```
 - edit ```$DIR/config/deploy-example.rb``` setting the following:
@@ -29,7 +29,7 @@
 
 and save it as: ```$DIR/config/deploy.rb```
 
-## post :install
+### post :install
 - if the process has finished without errors be happy :-)
 - you have just installed: emacs, git, ruby enterprise edition, nginx,
   passenger and mysql
