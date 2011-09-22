@@ -1,4 +1,8 @@
 # Installation script for Debian Squeeze Box
+## WHY?
+- there is plenty of passenger-stack out there but none of them work
+
+# Procedure
 ## pre :install
 - log in to your VPS slice using root account
 - execute ```passwd``` to change root password
@@ -29,4 +33,8 @@ and save it as: ```$DIR/config/deploy.rb```
 - if the process has finished without errors be happy :-)
 - you have just installed: emacs, git, ruby enterprise edition, nginx,
   passenger and mysql
+- customize your box by hand
+
+# Contributors
+- Thanks to Josh Goebel (yyyc514)
 
