@@ -5,9 +5,9 @@ end
 
 package :locale do
   description 'Sets your locale to en_US.UTF-8 UTF-8'
-  en = "en_US.UTF-8 UTF-8"
-  locale = "LANG=\"#{en}\""
-  locale_gen = "#{en} # en_US locale"
+  en = "en_US.UTF-8"
+  locale = "LANG=#{en}"
+  locale_gen = "#{en} UTF-8"
 
   push_text locale, "/tmp/locale" do
     pre :install, "rm /etc/default/locale"
@@ -23,8 +23,9 @@ package :locale do
     post :install, "locale-gen"
   end
 
+  # how to verify it?
   verify do
-    file_contains "/etc/locale.gen", locale_gen
+    file_contains "/etc/default/locale", locale
   end
 end
 
