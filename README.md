@@ -19,6 +19,10 @@ update ```/etc/sudoers.tmp``` using ```visudo``` adding the following line
 
     user_name   ALL=(ALL) ALL
 
+or alternatively add yourself to ```sudo``` group:
+
+    # usermod -a -G sudo user_name
+
 now you are ready to go with installation
 
 ### :install
