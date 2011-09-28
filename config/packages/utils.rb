@@ -9,6 +9,7 @@ package :locale do
   locale = "LANG=#{en}"
   locale_gen = "#{en} UTF-8"
 
+  # this is a workaround to the problem with sudo and push_text
   push_text locale, "/tmp/locale" do
     pre :install, "rm /etc/default/locale"
     post :install, "mv /tmp/locale /etc/default/locale"
